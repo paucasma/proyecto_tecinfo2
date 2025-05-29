@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Solidario - Plataforma de Donación Local</title>
+    <link rel="stylesheet" href="contenido.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><span class="logo-food">Sabor</span> <span class="logo-solidario">Solidario</span></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#about">Quiénes Somos</a></li>
+                    <li><a href="#food-donation">Donar Alimentos</a></li>
+                    <li><a href="#money-donation">Donar Dinero</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2>Conecta la Abundancia con la Necesidad</h2>
+                <p>Ayuda a tu comunidad donando alimentos y recursos financieros. ¡Cada contribución cuenta!</p>
+                <div class="hero-buttons">
+                    <a href="#food-donation" class="btn btn-primary animate-btn">Donar Alimentos <i class="fas fa-apple-alt"></i></a>
+                    <a href="#money-donation" class="btn btn-secondary animate-btn">Donar Dinero <i class="fas fa-hand-holding-usd"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section container">
+            <h2 class="section-title">Nuestra Misión</h2>
+            <p class="section-subtitle">Uniendo corazones para combatir el hambre local.</p>
+            <div class="about-grid">
+                <div class="about-item">
+                    <i class="fas fa-hands-helping icon-large"></i>
+                    <h3>Impacto Local</h3>
+                    <p>Nos enfocamos en apoyar a las familias y personas en situación de vulnerabilidad dentro de nuestra propia comunidad.</p>
+                </div>
+                <div class="about-item">
+                    <i class="fas fa-seedling icon-large"></i>
+                    <h3>Sostenibilidad</h3>
+                    <p>Promovemos la reducción del desperdicio de alimentos conectando excedentes con quienes los necesitan.</p>
+                </div>
+                <div class="about-item">
+                    <i class="fas fa-heart icon-large"></i>
+                    <h3>Transparencia</h3>
+                    <p>Garantizamos que cada donación llegue a su destino con total transparencia y responsabilidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="food-donation" class="donation-section food-section">
+            <div class="container">
+                <h2 class="section-title">¡Dona Alimentos!</h2>
+                <p class="section-subtitle">Tu excedente puede ser la comida de alguien más.</p>
+                <div class="food-info-grid">
+                    <div class="food-step">
+                        <i class="fas fa-map-marker-alt step-icon"></i>
+                        <h3>1. Encuentra tu Punto de Recolección</h3>
+                        <p>Ubica el centro de acopio más cercano a ti en nuestro mapa interactivo (próximamente).</p>
+                    </div>
+                    <div class="food-step">
+                        <i class="fas fa-box-open step-icon"></i>
+                        <h3>2. Prepara tus Donaciones</h3>
+                        <p>Asegúrate de que los alimentos estén en buen estado, sin abrir y dentro de su fecha de caducidad.</p>
+                    </div>
+                    <div class="food-step">
+                        <i class="fas fa-car step-icon"></i>
+                        <h3>3. Llévalos o Solicita Recogida</h3>
+                        <p>Puedes llevarlos personalmente o, en algunas zonas, podemos coordinar una recogida a domicilio.</p>
+                    </div>
+                </div>
+                <button class="btn btn-alt animate-btn" id="openFoodForm">Donar Ahora <i class="fas fa-plus-circle"></i></button>
+
+                <div id="foodDonationModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h3>Formulario de Donación de Alimentos</h3>
+                        <form id="foodDonationForm">
+                            <label for="foodType">Tipo de Alimento:</label>
+                            <input type="text" id="foodType" name="foodType" placeholder="Ej: Latas de atún, arroz, frijoles" required>
+
+                            <label for="foodQuantity">Cantidad (aprox.):</label>
+                            <input type="number" id="foodQuantity" name="foodQuantity" min="1" placeholder="Ej: 5 kg, 10 latas" required>
+
+                            <label for="foodLocation">Ubicación (Colonia/CP):</label>
+                            <input type="text" id="foodLocation" name="foodLocation" placeholder="Ej: Centro, 53000" required>
+
+                            <label for="foodNotes">Notas Adicionales:</label>
+                            <textarea id="foodNotes" name="foodNotes" rows="3" placeholder="Ej: Disponible para recoger después de las 3 PM"></textarea>
+
+                            <button type="submit" class="btn btn-primary form-submit-btn">Enviar Donación</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="money-donation" class="donation-section money-section">
+            <div class="container">
+                <h2 class="section-title">¡Dona Dinero!</h2>
+                <p class="section-subtitle">Cada centavo se convierte en esperanza.</p>
+                <div class="money-options-grid">
+                    <div class="money-option-card">
+                        <i class="fas fa-hand-holding-heart money-icon"></i>
+                        <h3>Apoyo General</h3>
+                        <p>Tu donación se destinará a donde más se necesite: compra de alimentos, logística, etc.</p>
+                        <button class="btn btn-secondary money-btn" data-amount="25">Donar $25</button>
+                    </div>
+                    <div class="money-option-card">
+                        <i class="fas fa-basket-shopping money-icon"></i>
+                        <h3>Canastas Familiares</h3>
+                        <p>Contribuye directamente a la compra de canastas de alimentos básicas para familias.</p>
+                        <button class="btn btn-secondary money-btn" data-amount="50">Donar $50</button>
+                    </div>
+                    <div class="money-option-card">
+                        <i class="fas fa-truck-fast money-icon"></i>
+                        <h3>Logística y Distribución</h3>
+                        <p>Ayuda a cubrir los costos de transporte y entrega para que los alimentos lleguen a tiempo.</p>
+                        <button class="btn btn-secondary money-btn" data-amount="100">Donar $100</button>
+                    </div>
+                </div>
+                <div class="custom-money-input">
+                    <label for="customAmount">O introduce otra cantidad:</label>
+                    <input type="number" id="customAmount" min="1" placeholder="Ej: 75" class="custom-amount-field">
+                    <button class="btn btn-primary animate-btn" id="donateCustomAmount">Donar Cantidad Personalizada <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works-section">
+            <div class="container">
+                <h2 class="section-title">¿Cómo Funciona?</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="timeline-content">
+                            <h3>1. Identificamos Necesidades</h3>
+                            <p>Colaboramos con organizaciones locales para identificar a las comunidades y familias más vulnerables.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+                        <div class="timeline-content">
+                            <h3>2. Recibimos Donaciones</h3>
+                            <p>Tu generosidad, ya sea en alimentos o dinero, es el motor de nuestra misión.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fas fa-boxes-stacked"></i></div>
+                        <div class="timeline-content">
+                            <h3>3. Clasificamos y Empacamos</h3>
+                            <p>Organizamos los alimentos y preparamos las canastas con cuidado y eficiencia.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fas fa-truck-ramp-box"></i></div>
+                        <div class="timeline-content">
+                            <h3>4. Distribuimos con Amor</h3>
+                            <p>Llevamos las donaciones directamente a quienes más las necesitan, con respeto y dignidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Historias que Inspiran</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial-slide active">
+                        <p>"Gracias a Sabor Solidario, mi familia tuvo comida en la mesa durante momentos difíciles. ¡Son ángeles!"</p>
+                        <span>- María P., Beneficiaria</span>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"Donar mis excedentes de cosecha a Sabor Solidario es una forma gratificante de contribuir a mi comunidad."</p>
+                        <span>- Juan L., Donante de Alimentos</span>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"Ver el impacto directo de mi donación monetaria en la vida de las personas es increíblemente motivador."</p>
+                        <span>- Ana G., Donante Monetaria</span>
+                    </div>
+                </div>
+                <div class="slider-dots"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Sabor Solidario</h3>
+                    <p>Conectando la abundancia con la necesidad, cultivando esperanza en cada plato.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#about">Quiénes Somos</a></li>
+                        <li><a href="#food-donation">Donar Alimentos</a></li>
+                        <li><a href="#money-donation">Donar Dinero</a></li>
+                        <li><a href="#contact">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Tu Dirección, Tu Ciudad, México</p>
+                    <p><i class="fas fa-envelope"></i> info@saborsolidario.org</p>
+                    <p><i class="fas fa-phone"></i> +52 (55) 1234 5678</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sabor Solidario. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="contenido.js"></script>
+</body>
+</html>
