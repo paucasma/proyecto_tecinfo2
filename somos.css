@@ -1,0 +1,86 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #007bff;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.about-us p {
+    font-size: 1.1em;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.canva-content {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e9f7ff;
+    border-radius: 8px;
+    border: 1px solid #cce7ff;
+}
+
+.canva-button {
+    display: inline-block;
+    background-color: #28a745; /* Un verde atractivo */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.canva-button:hover {
+    background-color: #218838; /* Un verde más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+.canva-button:active {
+    background-color: #1e7e34;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button-hint {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 30px;
+    background-color: #333;
+    color: white;
+}
